@@ -1,9 +1,10 @@
 // correct its css for speed tester
 
 import React, { useState, useEffect, useRef, useContext } from "react";
-import Logic from "./Logic";
+import customHook from "./customHook";
 function App(props) {
-  const { handleChange, text, start, areaRef, time, handleStart, count } = Logic()
+  // customHook();
+
   return (
     <div>
       <h1>How fast do you type?</h1>

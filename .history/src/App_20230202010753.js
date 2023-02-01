@@ -3,7 +3,8 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
 import Logic from "./Logic";
 function App(props) {
-  const { handleChange, text, start, areaRef, time, handleStart, count } = Logic()
+  // customHook();
+
   return (
     <div>
       <h1>How fast do you type?</h1>
