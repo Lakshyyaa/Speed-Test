@@ -1,5 +1,3 @@
-// correct its css for speed tester
-
 import React, { useState, useEffect, useRef, useContext } from "react";
 function App(props) {
   const THETIME = 5
@@ -13,7 +11,7 @@ function App(props) {
     setText(value)
   }
   function handleStart() {
-    areaRef.current.disabled = false;
+    areaRef.current.disabled=false;
     setStart(true)
     setCount(0);
     setText('');

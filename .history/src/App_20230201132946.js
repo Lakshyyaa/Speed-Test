@@ -1,4 +1,4 @@
-// correct its css for speed tester
+// correct its css 
 
 import React, { useState, useEffect, useRef, useContext } from "react";
 function App(props) {

@@ -1,6 +1,4 @@
-// correct its css for speed tester
-
-import React, { useState, useEffect, useRef, useContext } from "react";
+import React, { useState, useEffect, useRef } from "react";
 function App(props) {
   const THETIME = 5
   const [text, setText] = useState('');
@@ -13,13 +11,10 @@ function App(props) {
     setText(value)
   }
   function handleStart() {
-    areaRef.current.disabled = false;
-    setStart(true)
+    setStart(true).then(()=>())
     setCount(0);
     setText('');
     setTime(THETIME)
-    areaRef.current.focus()
-
   }
   function wordCount(str) {
     const arr = str.trim().split(' ')

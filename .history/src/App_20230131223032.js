@@ -1,25 +1,19 @@
-// correct its css for speed tester
-
-import React, { useState, useEffect, useRef, useContext } from "react";
+import React, { useState, useEffect } from "react";
 function App(props) {
   const THETIME = 5
   const [text, setText] = useState('');
   const [time, setTime] = useState(THETIME);
   const [start, setStart] = useState(false);
   const [count, setCount] = useState(0);
-  const areaRef = useRef(null)
   function handleChange(e) {
     const { value } = e.target;
     setText(value)
   }
   function handleStart() {
-    areaRef.current.disabled = false;
-    setStart(true)
+    setStart(true);
     setCount(0);
     setText('');
     setTime(THETIME)
-    areaRef.current.focus()
-
   }
   function wordCount(str) {
     const arr = str.trim().split(' ')
@@ -44,8 +38,7 @@ function App(props) {
       <textarea
         onChange={handleChange}
         value={text}
-        disabled={!start}
-        ref={areaRef}
+        disabled={start}
       />
       <h4>Time remaining: {time}</h4>
       <button onClick={() => handleStart()} disabled={start}>Start</button>

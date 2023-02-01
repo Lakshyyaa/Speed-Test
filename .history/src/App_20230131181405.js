@@ -1,29 +1,19 @@
-// correct its css for speed tester
+import React, { useState, useEffect } from "react";
 
-import React, { useState, useEffect, useRef, useContext } from "react";
 function App(props) {
-  const THETIME = 5
   const [text, setText] = useState('');
-  const [time, setTime] = useState(THETIME);
+  const [time, setTime] = useState(6);
   const [start, setStart] = useState(false);
   const [count, setCount] = useState(0);
-  const areaRef = useRef(null)
   function handleChange(e) {
     const { value } = e.target;
     setText(value)
-  }
-  function handleStart() {
-    areaRef.current.disabled = false;
-    setStart(true)
-    setCount(0);
-    setText('');
-    setTime(THETIME)
-    areaRef.current.focus()
-
+    // console.log(text);
   }
   function wordCount(str) {
     const arr = str.trim().split(' ')
     const filtered = arr.filter(word => (word != ''))
+    // console.log(filtered)
     return (filtered.length)
   }
   useEffect(() => {
@@ -38,20 +28,20 @@ function App(props) {
       console.log(count)
     }
   }, [time, start])
+
   return (
     <div>
       <h1>How fast do you type?</h1>
       <textarea
         onChange={handleChange}
         value={text}
-        disabled={!start}
-        ref={areaRef}
       />
       <h4>Time remaining: {time}</h4>
-      <button onClick={() => handleStart()} disabled={start}>Start</button>
+      <button onClick={() => setStart(true)}>Start</button>
       {/* cant directly call the wordCount here like handleChange because event listener automatically passes the e */}
-      <h1>Word Count: {count}</h1>
+      <h1>Word Count: {cou</h1>
     </div>
   )
 }
+
 export default App;
