@@ -8,13 +8,10 @@ function App(props) {
     setTimeout(() => {
       handleStart();
       console.log('whye');
-    }, 10000)
+    }, )
   }
   return (
     <div>
-      <div className='countDownDiv'>
-        
-      </div>
       <h1>How fast do you type?</h1>
       <textarea
         onChange={handleChange}

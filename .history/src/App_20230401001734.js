@@ -4,17 +4,13 @@ import React, { useState, useEffect, useRef, useContext } from "react";
 import Logic from "./Logic";
 function App(props) {
   const { handleChange, text, start, areaRef, time, handleStart, count } = Logic()
-  const countdown = () => {
-    setTimeout(() => {
-      handleStart();
-      console.log('whye');
-    }, 10000)
-  }
+  // const countdown = () => {
+  //   setTimeout(() => {
+  //     handleStart();
+  //   }, 10)
+  // }
   return (
     <div>
-      <div className='countDownDiv'>
-        
-      </div>
       <h1>How fast do you type?</h1>
       <textarea
         onChange={handleChange}

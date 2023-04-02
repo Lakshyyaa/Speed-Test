@@ -9,6 +9,7 @@ html, body{
 }
 .countDownDiv{
     z-index: 100;
+    
 }
 body{
     font-weight: 400;
