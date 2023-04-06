@@ -2,15 +2,15 @@ import React, { useState, useEffect, useRef } from "react";
 
 function Logic(){
     const THETIME = 5
-    const [text, setText] = useState('');
+    // const [text, setText] = useState('');
     const [time, setTime] = useState(THETIME);
     const [start, setStart] = useState(false);
     const [count, setCount] = useState(0);
     const areaRef = useRef(null)
-    function handleChange(e) {
-        const { value } = e.target;
-        setText(value)
-    }
+    // function handleChange(e) {
+    //     const { value } = e.target;
+    //     setText(value)
+    // }
     function handleStart() {
         areaRef.current.disabled = false;
         setStart(true)
@@ -37,7 +37,6 @@ function Logic(){
             console.log(count)
         }
     }, [time, start])
-    // return {start, areaRef, time, handleStart, start, count}
     return {handleChange, text, start, areaRef, time, handleStart, start, count}
 }
 export default Logic

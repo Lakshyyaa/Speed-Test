@@ -7,24 +7,24 @@ function Logic(){
     const [start, setStart] = useState(false);
     const [count, setCount] = useState(0);
     const areaRef = useRef(null)
-    function handleChange(e) {
-        const { value } = e.target;
-        setText(value)
-    }
+    // function handleChange(e) {
+    //     const { value } = e.target;
+    //     setText(value)
+    // }
     function handleStart() {
         areaRef.current.disabled = false;
         setStart(true)
         setCount(0);
-        setText('');
+        // setText('');
         setTime(THETIME)
         areaRef.current.focus()
 
     }
-    function wordCount(str) {
-        const arr = str.trim().split(' ')
-        const filtered = arr.filter(word => (word != ''))
-        return (filtered.length)
-    }
+    // function wordCount(str) {
+    //     const arr = str.trim().split(' ')
+    //     const filtered = arr.filter(word => (word != ''))
+    //     return (filtered.length)
+    // }
     useEffect(() => {
         if (time > 0 && start) {
             setTimeout(() => {
@@ -33,12 +33,12 @@ function Logic(){
         }
         else if (time === 0) {
             setStart(false)
-            setCount(wordCount(text))
+            // setCount(wordCount(text))
             console.log(count)
         }
     }, [time, start])
-    // return {start, areaRef, time, handleStart, start, count}
-    return {handleChange, text, start, areaRef, time, handleStart, start, count}
+    return {start, areaRef, time, handleStart, start, count}
+    // return {handleChange, text, start, areaRef, time, handleStart, start, count}
 }
 export default Logic
 //     < h1 > How fast do you type ?</h1 >

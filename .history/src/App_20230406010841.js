@@ -46,13 +46,14 @@ function App(props) {
       <div ref={maindiv}>
         <h1>How fast do you type?</h1>
         <textarea
-          onChange={handleChange} as no need for handle change
-          // value={words} 
+          // onChange={handleChange}
+          
+          // value={words}
           value={text}
           disabled={!start}
           ref={areaRef}
         />
-        {/* {words} */}
+        {words}
         <h4>Time remaining: {time}</h4>
         <button onClick={() => countdown()} disabled={start}>Start</button>
         {/* cant directly call the wordCount here like handleChange because event listener automatically passes the e */}

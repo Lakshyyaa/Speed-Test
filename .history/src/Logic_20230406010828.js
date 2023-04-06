@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 function Logic(){
     const THETIME = 5
-    const [text, setText] = useState('');
+    // const [text, setText] = useState('');
     const [time, setTime] = useState(THETIME);
     const [start, setStart] = useState(false);
     const [count, setCount] = useState(0);
@@ -37,7 +37,6 @@ function Logic(){
             console.log(count)
         }
     }, [time, start])
-    // return {start, areaRef, time, handleStart, start, count}
     return {handleChange, text, start, areaRef, time, handleStart, start, count}
 }
 export default Logic

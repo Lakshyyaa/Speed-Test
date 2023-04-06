@@ -37,8 +37,8 @@ function Logic(){
             console.log(count)
         }
     }, [time, start])
-    // return {start, areaRef, time, handleStart, start, count}
-    return {handleChange, text, start, areaRef, time, handleStart, start, count}
+    return {start, areaRef, time, handleStart, start, count}
+    // return {handleChange, text, start, areaRef, time, handleStart, start, count}
 }
 export default Logic
 //     < h1 > How fast do you type ?</h1 >

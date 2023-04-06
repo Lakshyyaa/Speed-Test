@@ -37,7 +37,7 @@ function Logic(){
             console.log(count)
         }
     }, [time, start])
-    // return {start, areaRef, time, handleStart, start, count}
+    return {start, areaRef, time, handleStart, start, count}
     return {handleChange, text, start, areaRef, time, handleStart, start, count}
 }
 export default Logic

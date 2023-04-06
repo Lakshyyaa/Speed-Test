@@ -15,7 +15,7 @@ function App(props) {
     fetch('https://random-word-api.herokuapp.com/word?number=10')
       .then(x => x.json())
       .then(y => {
-        const wordsArray = y.map((word) => word + " ")
+        const wordsArray=y.map((word)=>word+" ")
         setWords(wordsArray)
         // console.log(y)
       })
@@ -46,13 +46,13 @@ function App(props) {
       <div ref={maindiv}>
         <h1>How fast do you type?</h1>
         <textarea
-          onChange={handleChange} as no need for handle change
-          // value={words} 
-          value={text}
+          onChange={handleChange}
+          value={words}
+          it was
           disabled={!start}
           ref={areaRef}
         />
-        {/* {words} */}
+        {words}
         <h4>Time remaining: {time}</h4>
         <button onClick={() => countdown()} disabled={start}>Start</button>
         {/* cant directly call the wordCount here like handleChange because event listener automatically passes the e */}

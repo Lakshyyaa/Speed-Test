@@ -7,7 +7,6 @@ function App(props) {
   const [words, setWords] = useState([])
   const countdowndiv = useRef(null)
   const maindiv = useRef(null)
-  // let wordsArray
   const countdown = () => {
     countdowndiv.current.style.display = 'block'
     maindiv.current.style.opacity = '0.2'
@@ -15,15 +14,14 @@ function App(props) {
     fetch('https://random-word-api.herokuapp.com/word?number=10')
       .then(x => x.json())
       .then(y => {
-        const wordsArray = y.map((word) => word + " ")
-        setWords(wordsArray)
-        // console.log(y)
+        setWords(y)
+        console.log(y)
       })
   }
-  // useEffect(() => {
-  //   const wordsArray=words.map((word)=>word+" sex ")
-  //   console.log(wordsArray)
-  // },[words])
+  useEffect(() => {
+    const wordsArray=words.map((word)=>word+" ")
+    console.log(wo)
+  },[words])
   function timerLoop(i) {
     if (i > 0) {
       setTimerText(i)
@@ -45,14 +43,13 @@ function App(props) {
       </div>
       <div ref={maindiv}>
         <h1>How fast do you type?</h1>
-        <textarea
-          onChange={handleChange} as no need for handle change
-          // value={words} 
+        {/* <textarea
+          onChange={handleChange}
           value={text}
           disabled={!start}
           ref={areaRef}
-        />
-        {/* {words} */}
+        /> */}
+        {wordsArray}
         <h4>Time remaining: {time}</h4>
         <button onClick={() => countdown()} disabled={start}>Start</button>
         {/* cant directly call the wordCount here like handleChange because event listener automatically passes the e */}

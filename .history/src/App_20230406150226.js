@@ -1,8 +1,9 @@
 // correct its css for speed tester
+// add feature that the first one in room can start and if he leaves the next one becomes admin maybe?
 import React, { useState, useEffect, useRef, useContext } from "react";
 import Logic from "./Logic";
 function App(props) {
-  const { handleChange, text, start, areaRef, time, handleStart, count } = Logic()
+  // const { handleChange, text, start, areaRef, time, handleStart, count } = Logic()
   const [timerText, setTimerText] = useState(5)
   const [words, setWords] = useState([])
   const countdowndiv = useRef(null)
@@ -46,14 +47,12 @@ function App(props) {
       <div ref={maindiv}>
         <h1>How fast do you type?</h1>
         <textarea
-          onChange={handleChange} as no need for handle change
-          // value={words} 
-          value={text}
-          disabled={!start}
-          ref={areaRef}
+          // onChange={handleChange} as no need for handle change
+          value={words} 
+          // value={text}
         />
-        {/* {words} */}
-        <h4>Time remaining: {time}</h4>
+        {words}
+        <h4>Time remaining:</h4>
         <button onClick={() => countdown()} disabled={start}>Start</button>
         {/* cant directly call the wordCount here like handleChange because event listener automatically passes the e */}
         <h1>Word Count: {count}</h1>
