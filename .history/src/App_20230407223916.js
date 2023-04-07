@@ -95,7 +95,7 @@ function App(props) {
     //     <h1>Accuracy: {accuracy}%</h1>
     //   </div>
     // </div>
-    <userName/>
+    <user
   )
 }
 export default App;

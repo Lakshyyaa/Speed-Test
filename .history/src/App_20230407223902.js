@@ -4,7 +4,7 @@
 // additional: special ranks for first ranker and room creator which asssigns start permission to next joiner
 import React, { useState, useEffect, useRef, useContext, useDebugValue, useCallback } from "react";
 import Logic from "./Logic";
-import userName from "./userName";
+import user
 import userEvent from "@testing-library/user-event";
 import { type } from "@testing-library/user-event/dist/type";
 function App(props) {
@@ -81,21 +81,20 @@ function App(props) {
   }
 
   return (
-    // <div>
-    //   <div className="countdown" ref={countdowndiv}>
-    //     Begins in: {timerText}
-    //   </div>
-    //   <div ref={maindiv}>
-    //     <h1>How fast do you type?</h1>
-    //     <div ref={spandiv} className="spandiv" onKeyDown={e => { console.log(e) }}>
-    //       {words}
-    //     </div>
-    //     <button onClick={() => countdown()} disabled={start}>Start</button>
-    //     <h1>WPM: {wordspm}</h1>
-    //     <h1>Accuracy: {accuracy}%</h1>
-    //   </div>
-    // </div>
-    <userName/>
+    <div>
+      <div className="countdown" ref={countdowndiv}>
+        Begins in: {timerText}
+      </div>
+      <div ref={maindiv}>
+        <h1>How fast do you type?</h1>
+        <div ref={spandiv} className="spandiv" onKeyDown={e => { console.log(e) }}>
+          {words}
+        </div>
+        <button onClick={() => countdown()} disabled={start}>Start</button>
+        <h1>WPM: {wordspm}</h1>
+        <h1>Accuracy: {accuracy}%</h1>
+      </div>
+    </div>
   )
 }
 export default App;
