@@ -1,7 +1,5 @@
-// whenever someone joins ask their username
 // remember state var are used for display and re-render reasons not logic part.
-// features to be added: color change, showing other users bars and their stats, ranking,
-// additional: special ranks for first ranker and room creator which asssigns start permission to next joiner
+// features to be added: color change, showing other users bars and their stats, ranking
 import React, { useState, useEffect, useRef, useContext, useDebugValue, useCallback } from "react";
 import Logic from "./Logic";
 import userEvent from "@testing-library/user-event";
